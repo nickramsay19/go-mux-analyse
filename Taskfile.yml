@@ -1,14 +1,8 @@
 version: '3'
 
 tasks:
-    hello:
-        cmds:
-            - echo 'Hello World from Task!'
-        silent: true
-    dbuild:
+    start:
         cmds:
             - docker build -t go-server .
-    drun:
-        cmds:
-            - docker run -it --rm --name go-server -p 8080:80 go-server
+            - docker run -it --rm --name go-server -p 8080:8080 go-server
     
